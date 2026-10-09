@@ -1,0 +1,23 @@
+{
+  "name": "pqc-receipt-anchor",
+  "version": "0.1.0",
+  "description": "Write-once, ownerless Arbitrum anchor for ML-DSA-65 (FIPS 204) signed x402 receipts, plus an offline verifier.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test && npm --prefix verifier test",
+    "test:contract": "hardhat test",
+    "test:verifier": "npm --prefix verifier test",
+    "deploy:arbitrum-sepolia": "hardhat run scripts/deploy.js --network arbitrumSepolia",
+    "deploy:arbitrum-one": "hardhat run scripts/deploy.js --network arbitrumOne"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "chai": "^4.3.7",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.10.0",
+    "hardhat": "^2.19.4"
+  }
+}

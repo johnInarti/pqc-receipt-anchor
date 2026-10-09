@@ -1,0 +1,12 @@
+{
+  "name": "pqc-receipt-anchor-verifier",
+  "version": "0.1.0",
+  "description": "Offline verifier: ML-DSA-65 (FIPS 204) x402 seal + PQCReceiptAnchor event on any Arbitrum RPC. No trust in the issuer required.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "x402-verify-anchor": "./src/verify-anchor.mjs" },
+  "exports": { ".": "./src/verify-anchor.mjs", "./verify": "./src/witness-core.mjs" },
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "@noble/post-quantum": "^0.6.1" }
+}
